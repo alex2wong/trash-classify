@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拍照垃圾分类大法！！</title>
+</head>
+<style>
+    html,body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .container {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        /* position: relative; */
+    }
+    .center {
+        margin:5px auto;
+    }
+    .imgInput {
+        height: 100px;
+        border: 2px dashed #999;
+        border-radius: 8px;
+    }
+    .imgInput:hover {
+        background:rgba(240,240,240,.5);
+        border: 2px dotted pink;
+    }
+</style>
+<body>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+      <script src="./data/trashclasses.js"></script>
+
+      <div class="container">
+        <h4 style="text-align: center">拍照！垃圾分类大法</h4>
+        <input type="file" id="imgInput" value="" class="imgInput center" style="width:256px;">
+        <label for="imgInput" style="position: absolute;top:100px;left: 50%;margin-left:-100px;z-index: -1;">点击拍照或打开相册</label>
+        <img id='cat' src='/data/car.jpg' width=256 height=256 crossorigin class="center">
+        <canvas id="canvas" style="display: none;" width="256" height="256" class="center"></canvas>
+        <ul id="result" class="center"></ul>
+    </div>
+    <footer style="color: #aaa; font-size: 11px;text-align: right">copyright@<a href="https://github.com/alex2wong">alex2wong 2019</a></footer>
+
+    <script src="b.js"></script>
+</body>
+</html>
