@@ -14,6 +14,3 @@ app截图：
 扫码体验：
 
 ![二维🐎](https://github.com/alex2wong/trash-classify/blob/master/data/qrcode.png?raw=true)
-
-## 对应的微信小程序
-正在制作中，WIP～
